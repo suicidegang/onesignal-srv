@@ -29,7 +29,7 @@ Onesignal
 
 ### Onesignal.Send
 ```shell
-$ micro query sg.micro.srv.mail Mailing.SendTemplate '{
+$ micro query sg.micro.srv.onesignal Onesignal.Send '{
 	"message": "Hola mundo!",
 	"variables": {},
 	"ids": ["4cd0e86b-081f-4ea6-a0fa-68026f9612e8"]
