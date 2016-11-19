@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service Onesignal {
+	rpc SendAll(SendAllRequest) returns (SendAllResponse) {}
+	rpc Send(SendRequest) returns (SendResponse) {}
+}
+
+message SendAllRequest {
+	string message = 1;
+	map<string, string> variables = 2;
+}
+
+message SendAllResponse {
+	string messageID = 1;
+}
+
+message SendRequest {
+	string message = 1;
+	map<string, string> variables = 2;
+	repeated string segments = 3;
+	repeated string ids = 4;
+}
+
+message SendResponse {
+	string messageID = 1;
+}
